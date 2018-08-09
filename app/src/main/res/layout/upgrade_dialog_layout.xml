@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/llayout_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp12"
+                android:layout_marginTop="@dimen/dp12"
+                android:background="@drawable/icon_upgrade_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_point_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp170"
+                    android:gravity="center"
+                    android:text="有新版本"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp17" />
+
+                <TextView
+                    android:id="@+id/txt_point_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp35"
+                    android:layout_marginRight="@dimen/dp35"
+                    android:layout_marginTop="@dimen/dp11"
+                    android:layout_weight="1"
+                    android:text="那我又有一个新的版本"
+                    android:textColor="@color/notify_reason"
+                    android:textSize="@dimen/sp12" />
+
+                <TextView
+                    android:id="@+id/txt_button_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_marginBottom="@dimen/dp25"
+                    android:layout_marginLeft="@dimen/dp35"
+                    android:layout_marginRight="@dimen/dp35"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@drawable/black_bg"
+                    android:gravity="center"
+                    android:text="立即升级"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp16" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/txt_button_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@drawable/icon_upgrade_close" />
+        </FrameLayout>
+
+    </FrameLayout>
+</layout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="bbs.com.xinfeng.bbswork.ui.activity.TopicDeatilOtherActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/basebar"
+            layout="@layout/base_bar"></include>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/llayout_root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <bbs.com.xinfeng.bbswork.widget.CircleImageView
+                    android:id="@+id/iv_t_detail_page"
+                    android:layout_width="@dimen/dp81"
+                    android:layout_height="@dimen/dp81"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp40"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_topic_default"
+                    app:cornerRadius="@dimen/dp10"
+                    app:imageType="corner_image" />
+
+                <TextView
+                    android:id="@+id/txt_t_detail_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp17" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:gravity="center_vertical">
+
+                    <bbs.com.xinfeng.bbswork.widget.CircleImageView
+                        android:id="@+id/iv_head"
+                        android:layout_width="@dimen/dp24"
+                        android:layout_height="@dimen/dp24"
+                        android:layout_marginRight="@dimen/dp8"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_head_default" />
+
+                    <TextView
+                        android:id="@+id/txt_t_detail_authorname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_t_detail_property"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp25"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:textColor="@color/input_txt_lenght"
+                    android:textSize="@dimen/sp12" />
+
+                <include layout="@layout/base_lowline"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp60"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp30"
+                    android:paddingRight="@dimen/dp15">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycle_member_head"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"></android.support.v7.widget.RecyclerView>
+
+                    <TextView
+                        android:id="@+id/txt_member_length"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="@dimen/dp12"
+                        android:drawableRight="@drawable/icon_next"
+                        android:gravity="center"
+                        android:textColor="@color/input_txt_lenght"
+                        android:textSize="@dimen/sp12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp8"
+                    android:background="@color/line_block_color"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="@dimen/dp9"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:text="简介"
+                    android:textColor="@color/input_txt_lenght"
+                    android:textSize="@dimen/sp12" />
+
+                <TextView
+                    android:id="@+id/txt_t_detail_introduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:layout_marginRight="@dimen/dp30"
+                    android:textColor="@color/notify_reason"
+                    android:textSize="@dimen/sp12" />
+
+                <Button
+                    android:id="@+id/button_send"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:layout_marginLeft="@dimen/dp28"
+                    android:layout_marginRight="@dimen/dp28"
+                    android:layout_marginTop="@dimen/dp63"
+                    android:background="@drawable/button_finish"
+                    android:text="申请加入"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp16" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

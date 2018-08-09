@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00ffffff</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFffff</color>
+    <color name="alphawhite">#ccFFffff</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#00ff00</color>
+    <color name="blackreal">#000000</color>
+    <color name="black">#333333</color>
+    <color name="button_black">#2e2e2e</color>
+    <color name="protoal_black">#666666</color>
+    <color name="low_black">#999999</color>
+    <color name="black_mask">#99000000</color>
+
+    <color name="setting_outlogin">#FF3434</color>
+
+    <color name="background">#ececec</color>
+    <color name="white_alpha">#33dedede</color>
+    <color name="line_color">#d9d9d9</color>
+    <color name="line_block_color">#f5f5f5</color>
+    <color name="line_low_color">#dedede</color>
+    <color name="line_topic_color">#dedede</color>
+    <color name="bar_title_color">#333333</color>
+    <color name="input_hint_color">#adadad</color>
+    <color name="input_color">#333333</color>
+    <color name="input_txt_lenght">#A4A4A4</color>
+    <color name="theme_time">#A4A4A6</color>
+    <color name="register_code">#3B7CFF</color>
+    <color name="error_red">#FF3333</color>
+    <color name="input_search">#F2F2F2</color>
+    <color name="notify_reason">#717274</color>
+    <color name="low_white">#FBFBFB</color>
+    <color name="chatting_person_num">#727272</color>
+    <color name="notice_content">#535353</color>
+    <color name="stoke_gray">#9A9A9A</color>
+    <color name="theme_black">#424242</color>
+    <color name="topic_black">#474747</color>
+    <color name="online_bg">#43D05A</color>
+    <color name="retry_txt">#202020</color>
+    <color name="comment_txt">#666666</color>
+    <color name="see_comments">#3366FF</color>
+    <color name="see_reply">#3F69F6</color>
+    <color name="commentstitle">#747474</color>
+
+    <color name="record_normal_bg">#99000000</color>
+    <color name="record_cancel_bg">#99e50000</color>
+
+
+    <color name="record_progress_bg">#66000000</color> <!-- 40%不透明度 -->
+    <color name="record_progress">#ff584c</color>
+    <color name="record_progress_pending">#ff3b4a</color>
+    <color name="colorRed2">#ffffff</color>
+    <color name="biz_audio_progress_bg">#00b2ff</color>
+    <color name="biz_audio_progress_first">#ffffff</color>
+    <color name="biz_audio_progress_second">#6b6666</color>
+</resources>

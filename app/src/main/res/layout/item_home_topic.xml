@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp73"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp12">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp72"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/dp12">
+
+        <bbs.com.xinfeng.bbswork.widget.CircleImageView
+            android:id="@+id/iv_topic_page"
+            android:layout_width="@dimen/dp51"
+            android:layout_height="@dimen/dp51"
+            android:layout_marginRight="@dimen/dp13"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_topic_default"
+            app:cornerRadius="@dimen/dp4"
+            app:imageType="corner_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/txt_topic_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="出走的比特币"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:id="@+id/txt_topic_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="刚刚"
+                    android:textColor="@color/input_txt_lenght"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp21"
+                android:layout_marginTop="@dimen/dp8"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/txt_topic_lastcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="中本聪 1月2日创建"
+                    android:textColor="@color/input_txt_lenght"
+                    android:textSize="@dimen/sp12" />
+
+                <TextView
+                    android:id="@+id/txt_topic_mes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp20"
+                    android:background="@drawable/unread_bg"
+                    android:gravity="center"
+                    android:minWidth="@dimen/dp20"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp14" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp0.5"
+        android:background="@color/line_low_color"></View>
+</LinearLayout>

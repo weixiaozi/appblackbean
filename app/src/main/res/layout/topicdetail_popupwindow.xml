@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000">>
+
+
+    <FrameLayout
+        android:id="@+id/flayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llayout_root" />
+
+    <LinearLayout
+        android:id="@+id/llayout_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llayout_pop_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txt_pop_out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/dp15"
+                android:text="退出"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp8"
+                android:background="@color/line_block_color"></View>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txt_pop_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp15"
+            android:text="举报"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp16" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp8"
+            android:background="@color/line_block_color"></View>
+
+        <TextView
+            android:id="@+id/txt_pop_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp17"
+            android:paddingTop="@dimen/dp15"
+            android:text="@string/cancel"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp16" />
+
+    </LinearLayout>
+</RelativeLayout>

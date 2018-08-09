@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/llayout_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp15"
+            android:paddingLeft="@dimen/dp17"
+            android:paddingRight="@dimen/dp17"
+            android:paddingTop="@dimen/dp17">
+
+            <ImageView
+                android:layout_width="@dimen/dp14"
+                android:layout_height="@dimen/dp14"
+                android:layout_marginRight="@dimen/dp4"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_mine_reply_in" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:id="@+id/txt_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:textColor="@color/input_txt_lenght"
+                        android:textSize="@dimen/sp12" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_reply_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp15" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/base_lowline"></include>
+
+        <LinearLayout
+            android:id="@+id/llayout_reply_theme"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp17"
+            android:paddingRight="@dimen/dp17">
+
+            <View
+                android:layout_width="@dimen/dp14"
+                android:layout_height="@dimen/dp14"
+                android:layout_marginRight="@dimen/dp4"></View>
+
+            <TextView
+                android:id="@+id/txt_theme_topicname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp20"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/theme_time"
+                android:textSize="@dimen/sp12" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_next" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp8"
+            android:background="@color/line_block_color"></View>
+    </LinearLayout>
+</layout>

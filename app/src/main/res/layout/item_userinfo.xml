@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp20"
+    android:paddingLeft="@dimen/dp12"
+    android:paddingRight="@dimen/dp12">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/dp16"
+            android:paddingLeft="@dimen/dp18"
+            android:paddingRight="@dimen/dp18"
+            android:paddingTop="@dimen/dp24">
+
+            <bbs.com.xinfeng.bbswork.widget.CircleImageView
+                android:id="@+id/iv_topic_page"
+                android:layout_width="@dimen/dp50"
+                android:layout_height="@dimen/dp50"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_topic_default"
+                app:cornerRadius="@dimen/dp5"
+                app:imageType="corner_image" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp17"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_topic_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出走的比特币"
+                    android:textColor="@color/topic_black"
+                    android:textSize="@dimen/sp17" />
+
+                <TextView
+                    android:id="@+id/txt_topic_join"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:text="2-31 加入"
+                    android:textColor="@color/theme_time"
+                    android:textSize="@dimen/sp12" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_next" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp0.5"
+            android:layout_marginLeft="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+            android:background="@color/line_low_color"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_publistheme_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="112321"
+                    android:textColor="@color/notice_content"
+                    android:textSize="@dimen/sp13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:text="发表观点"
+                    android:textColor="@color/theme_time"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/dp0.5"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp15"
+                android:layout_marginTop="@dimen/dp15"
+                android:background="@color/line_low_color"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_replytheme_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="112321"
+                    android:textColor="@color/notice_content"
+                    android:textSize="@dimen/sp13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:text="回复观点"
+                    android:textColor="@color/theme_time"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/dp0.5"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp15"
+                android:layout_marginTop="@dimen/dp15"
+                android:background="@color/line_low_color"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_zantheme_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="112321"
+                    android:textColor="@color/notice_content"
+                    android:textSize="@dimen/sp13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:text="被赞"
+                    android:textColor="@color/theme_time"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

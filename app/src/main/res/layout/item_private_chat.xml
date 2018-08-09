@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp1">
+
+        <LinearLayout
+            android:id="@+id/llayout_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp14">
+
+            <TextView
+                android:id="@+id/txt_pchat_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp15"
+                android:background="@drawable/gray_bg"
+                android:paddingBottom="@dimen/dp4"
+                android:paddingLeft="@dimen/dp8"
+                android:paddingRight="@dimen/dp8"
+                android:paddingTop="@dimen/dp4"
+                android:text="10:00"
+                android:textColor="#feffff"
+                android:textSize="@dimen/sp11" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <bbs.com.xinfeng.bbswork.widget.CircleImageView
+                    android:id="@+id/iv_pchat_head"
+                    android:layout_width="@dimen/dp40"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_marginLeft="@dimen/dp8"
+                    android:layout_marginRight="@dimen/dp14"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_head_default" />
+
+                <FrameLayout
+                    android:id="@+id/flayout_content_root"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp2">
+
+                    <FrameLayout
+                        android:id="@+id/flayout_pchat_pic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/private_chat_pic_other_bg"
+                        android:padding="@dimen/dp0.5">
+
+                        <bbs.com.xinfeng.bbswork.widget.CircleImageView
+                            android:id="@+id/iv_pchat_pic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/icon_theme_default_big"
+                            app:cornerRadius="@dimen/dp6"
+                            app:imageType="corner_image"
+                            app:notRoundedCorners="left_top" />
+
+                        <TextView
+                            android:id="@+id/txt_longpic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|right"
+                            android:layout_margin="@dimen/dp8"
+                            android:background="@drawable/longpic_bg"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/dp2"
+                            android:paddingLeft="@dimen/dp4"
+                            android:paddingRight="@dimen/dp4"
+                            android:paddingTop="@dimen/dp2"
+                            android:text="长图"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp12" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tv_pchat_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp48"
+                        android:background="@drawable/other_mes_bg"
+                        android:paddingBottom="@dimen/dp8"
+                        android:paddingLeft="@dimen/dp16"
+                        android:paddingRight="@dimen/dp16"
+                        android:paddingTop="@dimen/dp8"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp16" />
+
+                    <LinearLayout
+                        android:id="@+id/llayout_audio_root"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp1"
+                        android:gravity="center_vertical">
+
+                        <FrameLayout
+                            android:id="@+id/voice_fl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/msg_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp37"
+                                android:background="@drawable/other_mes_bg"
+                                android:maxWidth="@dimen/dp210" />
+
+                            <ImageView
+                                android:id="@+id/voice_iv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|left"
+                                android:layout_marginLeft="@dimen/dp8"
+                                android:src="@drawable/jmui_voice_send" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp37"
+                            android:layout_marginLeft="@dimen/dp7"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/voice_readnew"
+                                android:layout_width="@dimen/dp9"
+                                android:layout_height="@dimen/dp9"
+                                android:background="@drawable/unread_bg"
+                                android:visibility="gone" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"></View>
+
+                            <TextView
+                                android:id="@+id/voice_length_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="@dimen/dp3"
+                                android:text="@string/jmui_voice_length"
+                                android:textColor="@color/input_txt_lenght"
+                                android:textSize="@dimen/sp12" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llayout_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/other_mes_bg"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/dp15"
+                        android:paddingLeft="@dimen/dp13"
+                        android:paddingRight="@dimen/dp13"
+                        android:paddingTop="@dimen/dp15">
+
+                        <TextView
+                            android:id="@+id/txt_link_title"
+                            android:layout_width="@dimen/dp224"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp6"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:maxWidth="@dimen/dp224"
+                            android:text="2018界面中国沙"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp16" />
+
+                        <TextView
+                            android:id="@+id/txt_link_des"
+                            android:layout_width="@dimen/dp224"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp8"
+                            android:ellipsize="end"
+                            android:maxLines="3"
+                            android:maxWidth="@dimen/dp224"
+                            android:text="技术分卡拉开发建设雷锋精神的发生"
+                            android:textColor="@color/low_black"
+                            android:textSize="@dimen/sp12" />
+
+                        <TextView
+                            android:id="@+id/txt_link_link"
+                            android:layout_width="@dimen/dp224"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/icon_private_link"
+                            android:drawablePadding="@dimen/dp2"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:maxWidth="@dimen/dp224"
+                            android:text="http://www.baidu.com/"
+                            android:textColor="@color/register_code"
+                            android:textSize="@dimen/sp12" />
+                    </LinearLayout>
+
+                </FrameLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+</layout>

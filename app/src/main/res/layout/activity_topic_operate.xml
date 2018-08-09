@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="bbs.com.xinfeng.bbswork.ui.activity.TopicOperateActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/basebar"
+            layout="@layout/base_bar"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp96"
+            android:gravity="center_vertical">
+
+            <bbs.com.xinfeng.bbswork.widget.CircleImageView
+                android:id="@+id/iv_topic_page"
+                android:layout_width="@dimen/dp36"
+                android:layout_height="@dimen/dp36"
+                android:layout_marginLeft="@dimen/dp28"
+                android:layout_marginRight="@dimen/dp13"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_topic_default"
+
+                app:cornerRadius="@dimen/dp5"
+                app:imageType="corner_image" />
+
+            <TextView
+                android:id="@+id/txt_topic_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp28"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp15" />
+        </LinearLayout>
+
+        <include layout="@layout/base_lowline"></include>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edit_operate_info"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp97"
+                android:background="@null"
+                android:paddingBottom="@dimen/dp20"
+                android:paddingLeft="@dimen/dp28"
+                android:paddingRight="@dimen/dp28"
+                android:paddingTop="@dimen/dp20" />
+
+            <TextView
+                android:id="@+id/txt_operate_lenght"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:layout_marginBottom="@dimen/dp16"
+                android:layout_marginRight="@dimen/dp30"
+                android:text="0/20"
+                android:textColor="@color/input_txt_lenght"
+                android:textSize="@dimen/sp12" />
+
+        </FrameLayout>
+
+        <include layout="@layout/base_lowline"></include>
+
+        <Button
+            android:id="@+id/button_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp28"
+            android:layout_marginRight="@dimen/dp28"
+            android:layout_marginTop="@dimen/dp25"
+            android:background="@drawable/button_finish"
+            android:text="提交申请"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16" />
+    </LinearLayout>
+</layout>
+

@@ -1,0 +1,71 @@
+<resources>
+    <string name="replace_emptyview">暂时没有数据~</string>
+    <string name="app_name">黑豆</string>
+    <string name="test1">&#xe625;</string>
+    <string name="test2">&#xe628;</string>
+    <string name="test3">&#xe649;</string>
+    <string name="test4">&#xe64c;</string>
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close drawer</string>
+    <string name="cancel">取消</string>
+    <string name="bar_register">登录/注册</string>
+    <string name="bar_modify_info">完善资料</string>
+    <string name="login_getcode">获取验证码</string>
+
+    <string name="home_title">黑豆</string>
+    <string name="topic_title_creat">创建话题</string>
+    <string name="topic_title_change">修改话题</string>
+    <string name="topic_title_join">加入话题</string>
+    <string name="topic_title_detail">话题详情</string>
+    <string name="topic_title_apply">话题申请</string>
+    <string name="notification">通知</string>
+    <string name="notification_detatil">通知详情</string>
+    <string name="member_in">邀请其他成员</string>
+    <string name="member_out">删除成员</string>
+    <string name="members_all">全部成员</string>
+    <string name="theme_detail">观点</string>
+
+    <string name="message_title">消息</string>
+    <string name="mes_reply_me">回复我的</string>
+    <string name="mes_click_me">@我的</string>
+    <string name="mes_notify">通知</string>
+    <string name="mes_operate">运营消息</string>
+    <string name="mes_system">系统消息</string>
+    <string name="mes_contacts">联系人</string>
+
+    <string name="mine_title">我</string>
+    <string name="mine_info">个人资料</string>
+    <string name="mine_theme">我的观点</string>
+    <string name="mine_reply">我的回复</string>
+    <string name="mine_follow">我的关注</string>
+    <string name="mine_fans">我的粉丝</string>
+    <string name="mine_blacks">黑名单</string>
+    <string name="mine_setting">设置</string>
+    <string name="setting_feedback">意见反馈</string>
+
+    <string name="collection_title">收藏</string>
+    <string name="manager">管理</string>
+    <string name="delete">删除</string>
+    <string name="finish">完成</string>
+    <string name="atmembers">提醒谁看</string>
+
+
+    <string name="jmui_create_file_failed">创建文件失败</string>
+    <string name="jmui_record_voice_hint">按住说话</string>
+    <string name="jmui_cancel_record_voice_hint">松开手指，取消发送</string>
+    <string name="jmui_send_voice_hint">松开结束</string>
+    <string name="jmui_move_to_cancel_hint">手指上滑，取消发送</string>
+    <string name="jmui_rest_record_time_hint">还可以说%s秒</string>
+    <string name="jmui_time_too_short_toast">时间太短！</string>
+    <string name="jmui_file_fetch_failed">文件获取失败</string>
+    <string name="jmui_voice_length">10"</string>
+    <string name="jmui_symbol_second">\"</string>
+    <string name="jmui_record_voice_permission_denied">请在应用的权限管理中将使用录音选项设置为允许，
+        否则将无法使用录音功能</string>
+    <string name="jmui_record_voice_permission_request">若要使用语音功能，请选择允许录音</string>
+    <string name="jmui_local_picture_not_found_toast">暂无外部存储，某些本地图片不可预览</string>
+    <string name="jmui_sdcard_not_exist_toast">暂无外部存储</string>
+    <string name="jmui_voice_fetch_failed_toast">获取语音失败，请重试</string>
+    <string name="jmui_file_not_found_toast">文件丢失</string>
+
+</resources>

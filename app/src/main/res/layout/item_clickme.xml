@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/llayout_collect_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingTop="@dimen/dp15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp10"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dp15">
+
+            <bbs.com.xinfeng.bbswork.widget.CircleImageView
+                android:id="@+id/iv_head"
+                android:layout_width="@dimen/dp24"
+                android:layout_height="@dimen/dp24"
+                android:layout_marginRight="@dimen/dp10"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_head_default" />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp8"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/input_txt_lenght"
+                android:textSize="@dimen/sp12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llayout_reply_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp20"
+            android:paddingRight="@dimen/dp15">
+
+            <TextView
+                android:id="@+id/txt_reply_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/txt_reply_topicname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/input_txt_lenght"
+                android:textSize="@dimen/sp12" />
+
+        </LinearLayout>
+
+
+        <include layout="@layout/base_lowline"></include>
+    </LinearLayout>
+</layout>

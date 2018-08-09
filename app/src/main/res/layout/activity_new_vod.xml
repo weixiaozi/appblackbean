@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_player"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+
+    <bbs.com.xinfeng.bbswork.utils.shortvideo.videoplay.SuperVideoPlayer
+        android:id="@+id/video_player_item_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></bbs.com.xinfeng.bbswork.utils.shortvideo.videoplay.SuperVideoPlayer>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp27">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp15"
+            android:src="@drawable/ic_new_vod_back_normal" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/dp15"
+            android:src="@drawable/icon_preview_delete"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</FrameLayout>
+

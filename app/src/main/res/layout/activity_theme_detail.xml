@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/line_low_color"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp43"
+                    android:background="@color/white">
+
+                    <FrameLayout
+                        android:id="@+id/bar_left_click"
+                        android:layout_width="@dimen/dp60"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/dp12">
+
+                        <ImageView
+                            android:id="@+id/bar_left_pic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical|left"
+                            android:src="@drawable/icon_back" />
+
+                    </FrameLayout>
+
+
+                    <TextView
+                        android:id="@+id/bar_txt_title"
+                        android:layout_width="@dimen/dp150"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/bar_title_color"
+                        android:textSize="@dimen/sp17" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"></View>
+
+                    <FrameLayout
+                        android:id="@+id/iv_theme_more"
+                        android:layout_width="@dimen/dp80"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/dp12">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical|right"
+                            android:src="@drawable/icon_more" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <include layout="@layout/base_line"></include>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:descendantFocusability="afterDescendants">
+
+                    <bbs.com.xinfeng.bbswork.widget.InterruptRv
+                        android:id="@+id/recycler_reply"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></bbs.com.xinfeng.bbswork.widget.InterruptRv>
+
+                    <ImageView
+                        android:id="@+id/iv_see_landlord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        android:layout_marginBottom="@dimen/dp33"
+                        android:layout_marginRight="@dimen/dp20"
+                        android:background="@drawable/selector_see_landlord" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical">
+
+
+                    <include layout="@layout/base_line"></include>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:id="@+id/llayout_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/llayout_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:paddingLeft="@dimen/dp15">
+
+                                    <ImageView
+                                        android:id="@+id/iv_chat_record"
+                                        android:layout_width="@dimen/dp22"
+                                        android:layout_height="@dimen/dp22"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginBottom="@dimen/dp15"
+                                        android:layout_marginRight="@dimen/dp15"
+                                        android:src="@drawable/icon_chat_record" />
+
+                                    <bbs.com.xinfeng.bbswork.widget.MsgEditText
+                                        android:id="@+id/edit_content"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:background="@null"
+                                        android:focusable="true"
+                                        android:focusableInTouchMode="true"
+                                        android:gravity="center_vertical"
+                                        android:hint="说说你的观点..."
+                                        android:maxHeight="@dimen/dp120"
+                                        android:paddingBottom="@dimen/dp15"
+                                        android:paddingTop="@dimen/dp15"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/input_txt_lenght"
+                                        android:textSize="@dimen/sp15" />
+
+
+                                    <FrameLayout
+                                        android:id="@+id/flayout_chat_send"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/dp50"
+                                        android:layout_gravity="bottom">
+
+                                        <ImageView
+                                            android:id="@+id/iv_chat_send"
+                                            android:layout_width="@dimen/dp22"
+                                            android:layout_height="@dimen/dp22"
+                                            android:layout_gravity="bottom"
+                                            android:layout_marginBottom="@dimen/dp15"
+                                            android:layout_marginLeft="@dimen/dp14"
+                                            android:layout_marginRight="@dimen/dp15"
+                                            android:background="@drawable/selector_chat_send" />
+                                    </FrameLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llayout_attach_function"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp41"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:id="@+id/iv_chat_emoji"
+                                        android:layout_width="@dimen/dp22"
+                                        android:layout_height="@dimen/dp22"
+                                        android:layout_marginLeft="@dimen/dp15"
+                                        android:background="@drawable/selector_chat_emoji" />
+
+                                    <FrameLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <ImageView
+                                            android:id="@+id/iv_chat_click"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="@dimen/dp22"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="@dimen/dp15"
+                                            android:src="@drawable/icon_chat_click" />
+                                    </FrameLayout>
+
+                                    <FrameLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
+
+                                        <ImageView
+                                            android:id="@+id/iv_chat_add"
+                                            android:layout_width="@dimen/dp22"
+                                            android:layout_height="@dimen/dp22"
+                                            android:layout_gravity="center"
+                                            android:background="@drawable/selector_chat_pic" />
+
+                                        <TextView
+                                            android:id="@+id/txt_chat_picnum"
+                                            android:layout_width="@dimen/dp18"
+                                            android:layout_height="@dimen/dp18"
+                                            android:layout_gravity="top|center_horizontal"
+                                            android:layout_marginLeft="@dimen/dp11"
+                                            android:background="@drawable/unread_bg"
+                                            android:gravity="center"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/sp13"
+                                            android:visibility="gone" />
+                                    </FrameLayout>
+
+                                    <FrameLayout
+                                        android:id="@+id/flayout_chat_video"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            android:id="@+id/iv_chat_add_video"
+                                            android:layout_width="@dimen/dp22"
+                                            android:layout_height="@dimen/dp22"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginRight="@dimen/dp15"
+                                            android:alpha="0.35"
+                                            android:background="@drawable/selector_chat_video" />
+
+                                        <TextView
+                                            android:id="@+id/txt_chat_videonum"
+                                            android:layout_width="@dimen/dp18"
+                                            android:layout_height="@dimen/dp18"
+                                            android:layout_gravity="top|left"
+                                            android:layout_marginLeft="@dimen/dp11"
+                                            android:background="@drawable/unread_bg"
+                                            android:gravity="center"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/sp13"
+                                            android:visibility="gone" />
+
+                                    </FrameLayout>
+
+                                </LinearLayout>
+
+                                <include layout="@layout/base_lowline"></include>
+
+                                <FrameLayout
+                                    android:id="@+id/fllayout_chatmenu"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white">
+
+                                    <FrameLayout
+                                        android:id="@+id/flayout_chat_pic_root"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dp232"
+                                        android:visibility="gone">
+
+                                        <ImageView
+                                            android:id="@+id/iv_chatmenu_pic_emptyadd"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/icon_chat_addpic" />
+
+                                        <LinearLayout
+                                            android:id="@+id/llayout_chatmenu_pic_show"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                            <android.support.v7.widget.RecyclerView
+                                                android:id="@+id/recycle_chatmenu_pic_show"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:paddingBottom="@dimen/dp12"
+                                                android:paddingLeft="@dimen/dp15"
+                                                android:paddingRight="@dimen/dp5">
+
+                                            </android.support.v7.widget.RecyclerView>
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/dp45"
+                                                android:gravity="center"
+                                                android:paddingLeft="@dimen/dp15"
+                                                android:paddingRight="@dimen/dp15">
+
+                                                <TextView
+                                                    android:id="@+id/txt_chatmenu_pic_point"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="长按图片拖动可以调整排序（6/9）"
+                                                    android:textColor="@color/input_txt_lenght"
+                                                    android:textSize="@dimen/sp12" />
+
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                    </FrameLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llayout_chat_emoji_root"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dp232"
+                                        android:orientation="vertical"
+                                        android:visibility="gone">
+
+                                        <android.support.v4.view.ViewPager
+                                            android:id="@+id/vp_emoji"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/dp10"
+                                            android:layout_weight="1" />
+
+
+                                        <FrameLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/dp40">
+
+                                            <LinearLayout
+                                                android:id="@+id/ll_dot"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"></LinearLayout>
+
+                                            <ImageView
+                                                android:id="@+id/iv_emoji_delete"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical|right"
+                                                android:layout_marginRight="@dimen/dp20"
+                                                android:src="@drawable/icon_emoji_back" />
+                                        </FrameLayout>
+                                    </LinearLayout>
+                                </FrameLayout>
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:id="@+id/flayout_record"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:id="@+id/iv_chat_keyboard"
+                                    android:layout_width="@dimen/dp22"
+                                    android:layout_height="@dimen/dp22"
+                                    android:layout_gravity="bottom|left"
+                                    android:layout_marginBottom="@dimen/dp15"
+                                    android:layout_marginLeft="@dimen/dp15"
+                                    android:src="@drawable/icon_chat_keyboard" />
+
+                                <bbs.com.xinfeng.bbswork.widget.recordvoice.RecordVoiceButton
+                                    android:id="@+id/button_record"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/dp17"
+                                    android:layout_marginTop="@dimen/dp22"
+                                    android:background="@null"
+                                    android:drawablePadding="@dimen/dp4"
+                                    android:drawableTop="@drawable/icon_chat_record_act"
+                                    android:text="按住说话"
+                                    android:textColor="@color/input_txt_lenght"
+                                    android:textSize="@dimen/sp12" />
+                            </FrameLayout>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llayout_menu"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp49"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/txt_show_edit"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:lines="1"
+                                android:paddingLeft="@dimen/dp15"
+                                android:textColor="@color/input_txt_lenght"
+                                android:textSize="@dimen/sp15" />
+
+                            <FrameLayout
+                                android:id="@+id/flayout_theme_collect"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/iv_theme_collect"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="@dimen/dp19"
+                                    android:background="@drawable/selector_theme_collect_big" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:id="@+id/flayout_theme_zan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/iv_theme_zan"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="@dimen/dp19"
+                                    android:background="@drawable/selector_theme_zan_big" />
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <!-- <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="bottom"
+                     android:orientation="vertical">
+
+                     <include layout="@layout/base_lowline"></include>
+
+                     <FrameLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content">
+
+                         <LinearLayout
+                             android:id="@+id/llayout_edit"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:background="@color/white"
+                             android:paddingLeft="@dimen/dp15"
+                             android:paddingRight="@dimen/dp15"
+                             android:visibility="gone">
+
+                             <bbs.com.xinfeng.bbswork.widget.MsgEditText
+                                 android:id="@+id/edit_content"
+                                 android:layout_width="0dp"
+                                 android:layout_height="wrap_content"
+                                 android:layout_weight="1"
+                                 android:maxHeight="@dimen/dp120"
+                                 android:background="@null"
+                                 android:gravity="center_vertical"
+                                 android:hint="回复"
+                                 android:paddingBottom="@dimen/dp15"
+                                 android:paddingTop="@dimen/dp15"
+                                 android:textColor="@color/black"
+                                 android:textColorHint="@color/input_txt_lenght"
+                                 android:textSize="@dimen/sp15" />
+
+                             <ImageView
+                                 android:id="@+id/iv_chat_emoji"
+                                 android:layout_width="@dimen/dp22"
+                                 android:layout_height="@dimen/dp22"
+                                 android:layout_gravity="bottom"
+                                 android:layout_marginBottom="@dimen/dp15"
+                                 android:layout_marginLeft="@dimen/dp15"
+                                 android:background="@drawable/selector_chat_emoji" />
+
+                             <ImageView
+                                 android:id="@+id/iv_chat_send"
+                                 android:layout_width="@dimen/dp22"
+                                 android:layout_height="@dimen/dp22"
+                                 android:layout_gravity="bottom"
+                                 android:layout_marginBottom="@dimen/dp15"
+                                 android:layout_marginLeft="@dimen/dp14"
+                                 android:background="@drawable/selector_chat_send" />
+
+                         </LinearLayout>
+
+                         <LinearLayout
+                             android:id="@+id/llayout_menu"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/dp49"
+                             android:background="@color/white"
+                             android:gravity="center_vertical">
+
+                             <TextView
+                                 android:id="@+id/txt_show_edit"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="match_parent"
+                                 android:layout_weight="1"
+                                 android:ellipsize="end"
+                                 android:gravity="center_vertical"
+                                 android:lines="1"
+                                 android:paddingLeft="@dimen/dp15"
+                                 android:textColor="@color/input_txt_lenght"
+                                 android:textSize="@dimen/sp15" />
+
+                             <FrameLayout
+                                 android:id="@+id/flayout_theme_collect"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="match_parent">
+
+                                 <ImageView
+                                     android:id="@+id/iv_theme_collect"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content"
+                                     android:layout_gravity="center_vertical"
+                                     android:layout_marginRight="@dimen/dp19"
+                                     android:background="@drawable/selector_theme_collect_big" />
+                             </FrameLayout>
+
+                             <FrameLayout
+                                 android:id="@+id/flayout_theme_zan"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="match_parent">
+
+                                 <ImageView
+                                     android:id="@+id/iv_theme_zan"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content"
+                                     android:layout_gravity="center_vertical"
+                                     android:layout_marginRight="@dimen/dp19"
+                                     android:background="@drawable/selector_theme_zan_big" />
+                             </FrameLayout>
+
+
+                         </LinearLayout>
+                     </FrameLayout>
+
+
+                     <include layout="@layout/base_lowline"></include>
+
+                     <FrameLayout
+                         android:id="@+id/fllayout_chatmenu"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@color/white">
+
+                         <LinearLayout
+                             android:id="@+id/llayout_chat_emoji_root"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/dp232"
+                             android:orientation="vertical"
+                             android:visibility="gone">
+
+                             <android.support.v4.view.ViewPager
+                                 android:id="@+id/vp_emoji"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_marginTop="@dimen/dp10"
+                                 android:layout_weight="1" />
+
+
+                             <FrameLayout
+                                 android:layout_width="match_parent"
+                                 android:layout_height="@dimen/dp40">
+
+                                 <LinearLayout
+                                     android:id="@+id/ll_dot"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:gravity="center"
+                                     android:orientation="horizontal"></LinearLayout>
+
+                                 <ImageView
+                                     android:id="@+id/iv_emoji_delete"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content"
+                                     android:layout_gravity="center_vertical|right"
+                                     android:layout_marginRight="@dimen/dp20"
+                                     android:src="@drawable/icon_emoji_back" />
+                             </FrameLayout>
+                         </LinearLayout>
+                     </FrameLayout>
+                 </LinearLayout>-->
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/view_middle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></View>
+
+        <include
+            android:id="@+id/reply_root"
+            layout="@layout/reply_popupwindow"></include>
+    </FrameLayout>
+
+</layout>

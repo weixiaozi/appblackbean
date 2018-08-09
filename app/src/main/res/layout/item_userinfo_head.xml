@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp210"
+            android:background="@drawable/icon_userinfo_bg"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp25"
+            android:paddingRight="@dimen/dp25">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp12">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/dp58"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="薛蛮子"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp30" />
+
+                    <TextView
+                        android:id="@+id/txt_userintroduce"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:textColor="@color/white_alpha"
+                        android:textSize="@dimen/sp13" />
+                </LinearLayout>
+
+                <bbs.com.xinfeng.bbswork.widget.CircleImageView
+                    android:id="@+id/iv_userhead"
+                    android:layout_width="@dimen/dp70"
+                    android:layout_height="@dimen/dp70"
+                    android:layout_marginTop="@dimen/dp50"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_head_default" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp0.5"
+                android:background="@color/topic_black"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/txt_userinfo_fans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="28 关注      2011 粉丝"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp13" />
+
+                <TextView
+                    android:id="@+id/button_userinfo_chat"
+                    android:layout_width="@dimen/dp70"
+                    android:layout_height="@dimen/dp34"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:background="@drawable/follow_stroke_bg"
+                    android:gravity="center"
+                    android:text="私信"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15" />
+
+                <TextView
+                    android:id="@+id/button_userinfo_follow"
+                    android:layout_width="@dimen/dp70"
+                    android:layout_height="@dimen/dp34"
+                    android:background="@drawable/follow_stroke_bg"
+                    android:gravity="center"
+                    android:text="关注"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_userinfo_jointopic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp9"
+            android:paddingLeft="@dimen/dp17"
+            android:paddingTop="@dimen/dp20"
+            android:text="Ta加入的话题"
+            android:textColor="@color/input_txt_lenght"
+            android:textSize="@dimen/sp12" />
+    </LinearLayout>
+</layout>

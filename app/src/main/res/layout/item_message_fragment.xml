@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llayout_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingLeft="@dimen/dp12"
+        android:paddingRight="@dimen/dp12"
+        android:paddingTop="@dimen/dp10">
+
+        <bbs.com.xinfeng.bbswork.widget.CircleImageView
+            android:id="@+id/iv_head"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginRight="@dimen/dp13"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_head_default" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/dp32"
+            android:layout_marginTop="@dimen/dp2"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_friend_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp6"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxWidth="@dimen/dp100"
+                android:text="李强"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/txt_last_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="还有人在了吗"
+                android:textColor="@color/input_txt_lenght"
+                android:textSize="@dimen/sp13" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_last_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp8"
+                android:text="1min"
+                android:textColor="@color/input_txt_lenght"
+                android:textSize="@dimen/sp12" />
+
+            <TextView
+                android:id="@+id/txt_operate_mes"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp20"
+                android:background="@drawable/unread_bg"
+                android:gravity="center"
+                android:minWidth="@dimen/dp20"
+                android:paddingLeft="@dimen/dp5"
+                android:paddingRight="@dimen/dp5"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp0.5"
+        android:layout_marginLeft="@dimen/dp12"
+        android:background="@color/line_low_color"></View>
+</LinearLayout>

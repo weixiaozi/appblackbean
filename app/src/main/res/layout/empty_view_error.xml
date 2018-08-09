@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/txt_empty_des"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icon_empty_error" />
+
+        <TextView
+            android:id="@+id/txt_empty_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="数据加载失败，请重新检查网络"
+            android:textColor="@color/input_txt_lenght"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/txt_empty_retry"
+            android:layout_width="@dimen/dp140"
+            android:layout_height="@dimen/dp43"
+            android:layout_alignTop="@id/txt_empty_des"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp77"
+            android:background="@drawable/retry_stroke_bg"
+            android:gravity="center"
+            android:text="刷新重试"
+            android:textColor="@color/retry_txt"
+            android:textSize="@dimen/sp14" />
+
+
+    </RelativeLayout>
+</layout>

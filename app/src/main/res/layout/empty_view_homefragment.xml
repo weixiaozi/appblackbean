@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llayout_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_empty_home" />
+
+            <TextView
+                android:id="@+id/txt_no_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="欢迎 tinatian"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp18" />
+
+            <TextView
+                android:id="@+id/txt_no_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:gravity="center"
+                android:text="开始创建一个新群组，与好友们讨论属于自己的共同话题吧！"
+                android:textColor="@color/input_txt_lenght"
+                android:textSize="@dimen/sp12" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/dp191"
+            android:layout_height="@dimen/dp40"
+            android:layout_gravity="right|top"
+            android:layout_marginRight="@dimen/dp10"
+            android:src="@drawable/icon_home_first" />
+    </FrameLayout>
+</layout>

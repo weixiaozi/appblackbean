@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <bbs.com.xinfeng.bbswork.widget.CircleImageView
+            android:id="@+id/iv_head"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_marginRight="@dimen/dp10"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_head_default" />
+
+        <ImageView
+            android:id="@+id/iv_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="@dimen/dp10"
+            android:src="@drawable/icon_members_new" />
+
+        <ImageView
+            android:id="@+id/iv_member_online"
+            android:layout_width="@dimen/dp10"
+            android:layout_height="@dimen/dp10"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="@dimen/dp10"
+            android:background="@drawable/online_bg" />
+
+    </FrameLayout>
+</layout>

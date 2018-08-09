@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/basebar"
+            layout="@layout/base_bar"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <bbs.com.xinfeng.bbswork.widget.CircleImageView
+                android:id="@+id/iv_head"
+                android:layout_width="@dimen/dp37"
+                android:layout_height="@dimen/dp37"
+                android:layout_marginBottom="@dimen/dp12"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp12"
+                android:layout_marginTop="@dimen/dp12"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_head_default" />
+
+            <TextView
+                android:id="@+id/txt_apply_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="李强"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14" />
+        </LinearLayout>
+
+        <include layout="@layout/base_line"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginBottom="@dimen/dp18"
+            android:layout_marginTop="@dimen/dp24"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp15"
+            android:paddingRight="@dimen/dp15">
+
+            <bbs.com.xinfeng.bbswork.widget.CircleImageView
+                android:id="@+id/iv_topic_page"
+                android:layout_width="@dimen/dp50"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginRight="@dimen/dp12"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_topic_default"
+                app:cornerRadius="@dimen/dp4"
+                app:imageType="corner_image" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_topic_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="商业价值"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:id="@+id/txt_topic_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="2成员  234观点"
+                    android:textColor="@color/input_hint_color"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_topic_introduce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp30"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:text="中本聪 1月2日创建"
+            android:textColor="@color/notify_reason"
+            android:textSize="@dimen/sp14" />
+
+        <include layout="@layout/base_line"></include>
+
+        <TextView
+            android:id="@+id/txt_notify_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp28"
+            android:layout_marginRight="@dimen/dp28"
+            android:layout_marginTop="@dimen/dp20"
+            android:background="@drawable/black_bg"
+            android:gravity="center"
+            android:padding="@dimen/dp10"
+            android:text="同意"
+            android:textColor="@color/low_white"
+            android:textSize="@dimen/sp16" />
+
+        <LinearLayout
+            android:id="@+id/llayout_operate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp20"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/button_notify_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp8"
+                android:layout_weight="1"
+                android:background="@drawable/retry_stroke_bg"
+                android:gravity="center"
+                android:text="拒绝"
+                android:textColor="@color/button_black"
+                android:textSize="@dimen/sp16" />
+
+            <Button
+                android:id="@+id/button_notify_yes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp8"
+                android:layout_weight="1"
+                android:background="@drawable/black_bg"
+                android:gravity="center"
+                android:text="同意"
+                android:textColor="@color/low_white"
+                android:textSize="@dimen/sp16" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,29 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml:2:1-7:12
+	package
+		ADDED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml:3:11-56
+		INJECTED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml
+		INJECTED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml:5:11-36
+		INJECTED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml
+		INJECTED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml:4:11-34
+		INJECTED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml
+		INJECTED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml
+uses-sdk
+ADDED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml:6:5-73
+	android:targetSdkVersion
+		ADDED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml:6:42-71
+	android:minSdkVersion
+		ADDED from D:\bbswork\bbs_project\scaleimglibrary\src\main\AndroidManifest.xml:6:15-41

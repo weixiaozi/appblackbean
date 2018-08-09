@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp57"
+        android:background="@color/white"
+        tools:context="bbs.com.xinfeng.bbswork.ui.activity.JoinedTopicActivity">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp36"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@drawable/input_search_bg">
+
+            <TextView
+                android:id="@+id/txt_search_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/icon_search"
+                android:drawablePadding="@dimen/dp9"
+                android:text="搜索话题" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <include layout="@layout/base_lowline"></include>
+</LinearLayout>

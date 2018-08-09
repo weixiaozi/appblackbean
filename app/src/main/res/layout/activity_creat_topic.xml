@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/basebar"
+            layout="@layout/base_bar"></include>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp20">
+
+            <bbs.com.xinfeng.bbswork.widget.CircleImageView
+                android:id="@+id/iv_page"
+                android:layout_width="@dimen/dp81"
+                android:layout_height="@dimen/dp81"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_topic_page"
+                app:cornerRadius="@dimen/dp5"
+                app:imageType="corner_image" />
+
+            <ImageView
+                android:id="@+id/iv_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/loading"
+                android:visibility="gone" />
+        </FrameLayout>
+
+
+        <include layout="@layout/base_lowline"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp28">
+
+            <EditText
+                android:id="@+id/edit_topic_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp49"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="话题名称"
+                android:textColor="@color/input_color"
+                android:textColorHint="@color/input_hint_color"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:id="@+id/txt_topicname_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp19"
+                android:text="0/12"
+                android:textColor="@color/input_txt_lenght"
+                android:textSize="@dimen/sp12" />
+        </LinearLayout>
+
+
+        <include layout="@layout/base_lowline"></include>
+
+        <EditText
+            android:id="@+id/edit_topic_introduce"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp95"
+            android:layout_marginLeft="@dimen/dp28"
+            android:layout_marginRight="@dimen/dp28"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="简介"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingTop="@dimen/dp16"
+            android:textColor="@color/input_color"
+            android:textColorHint="@color/input_hint_color"
+            android:textSize="@dimen/sp16" />
+
+        <TextView
+            android:id="@+id/txt_topicintroduce_length"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp19"
+            android:gravity="right"
+            android:text="0/100"
+            android:textColor="@color/input_txt_lenght"
+            android:textSize="@dimen/sp12" />
+
+        <include layout="@layout/base_lowline"></include>
+
+        <Button
+            android:id="@+id/button_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp28"
+            android:layout_marginRight="@dimen/dp28"
+            android:layout_marginTop="@dimen/dp26"
+            android:background="@drawable/button_finish"
+            android:text="创建"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16" />
+
+    </LinearLayout>
+</layout>

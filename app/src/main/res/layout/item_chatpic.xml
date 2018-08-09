@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingRight="@dimen/dp5"
+        android:paddingTop="@dimen/dp5">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_chat_pic"
+                android:layout_width="@dimen/dp80"
+                android:layout_height="@dimen/dp80"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_theme_default" />
+
+            <TextView
+                android:id="@+id/txt_chat_pic_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="+6"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15"
+                android:visibility="gone" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+</layout>

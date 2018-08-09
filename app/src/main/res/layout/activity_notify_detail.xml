@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/basebar"
+            layout="@layout/base_bar"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/dp12"
+            android:paddingLeft="@dimen/dp15"
+            android:paddingRight="@dimen/dp20"
+            android:paddingTop="@dimen/dp12">
+
+            <bbs.com.xinfeng.bbswork.widget.CircleImageView
+                android:id="@+id/iv_head"
+                android:layout_width="@dimen/dp37"
+                android:layout_height="@dimen/dp37"
+                android:layout_marginRight="@dimen/dp15"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_head_default" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp15"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="李强"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16" />
+
+                <TextView
+                    android:id="@+id/txt_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="申请加入 商业价值论坛"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp14" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_notify_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/input_txt_lenght"
+                android:textSize="@dimen/sp12" />
+        </LinearLayout>
+
+
+        <include layout="@layout/base_lowline"></include>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/llayout_type_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp8"
+                        android:layout_marginLeft="@dimen/dp15"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:text="申请信息"
+                        android:textColor="@color/input_txt_lenght"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:id="@+id/txt_one_apply_reason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp20"
+                        android:layout_marginLeft="@dimen/dp15"
+                        android:layout_marginRight="@dimen/dp15"
+                        android:text="我申请加入这个群"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <include layout="@layout/base_lowline"></include>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llayout_one_refuse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp8"
+                        android:layout_marginLeft="@dimen/dp15"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:text="拒绝原因"
+                        android:textColor="@color/input_txt_lenght"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:id="@+id/txt_one_refuse_reason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp20"
+                        android:layout_marginLeft="@dimen/dp15"
+                        android:layout_marginRight="@dimen/dp15"
+                        android:text="我拒绝加入这个群"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <include layout="@layout/base_lowline"></include>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llayout_one_operate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:layout_marginRight="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <Button
+                        android:id="@+id/button_one_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_marginRight="@dimen/dp8"
+                        android:layout_weight="1"
+                        android:background="@drawable/retry_stroke_bg"
+                        android:gravity="center"
+                        android:text="拒绝"
+                        android:textColor="@color/button_black"
+                        android:textSize="@dimen/sp16" />
+
+                    <Button
+                        android:id="@+id/button_one_yes"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_marginLeft="@dimen/dp8"
+                        android:layout_weight="1"
+                        android:background="@drawable/black_bg"
+                        android:gravity="center"
+                        android:text="同意"
+                        android:textColor="@color/low_white"
+                        android:textSize="@dimen/sp16" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llayout_type_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/llayout_two_refuse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp8"
+                        android:layout_marginLeft="@dimen/dp15"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:text="拒绝理由"
+                        android:textColor="@color/input_txt_lenght"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:id="@+id/txt_two_refuse_reason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp20"
+                        android:layout_marginLeft="@dimen/dp15"
+                        android:layout_marginRight="@dimen/dp15"
+                        android:text="bei拒绝加入这个群"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <include layout="@layout/base_lowline"></include>
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/button_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_marginLeft="@dimen/dp28"
+                    android:layout_marginRight="@dimen/dp28"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_weight="1"
+                    android:background="@drawable/retry_stroke_bg"
+                    android:gravity="center"
+                    android:text="重新申请"
+                    android:textColor="@color/button_black"
+                    android:textSize="@dimen/sp16" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llayout_type_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginBottom="@dimen/dp18"
+                    android:layout_marginTop="@dimen/dp24"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp15"
+                    android:paddingRight="@dimen/dp15">
+
+                    <bbs.com.xinfeng.bbswork.widget.CircleImageView
+                        android:id="@+id/iv_three_topic_page"
+                        android:layout_width="@dimen/dp50"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginRight="@dimen/dp12"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_topic_default"
+                        app:cornerRadius="@dimen/dp4"
+                        app:imageType="corner_image" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_three_topic_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:text="商业价值"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp14" />
+
+                        <TextView
+                            android:id="@+id/txt_three_topic_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp8"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:text="2成员  234观点"
+                            android:textColor="@color/input_hint_color"
+                            android:textSize="@dimen/sp12" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_three_topic_introduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp30"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:text="中本聪 1月2日创建"
+                    android:textColor="@color/chatting_person_num"
+                    android:textSize="@dimen/sp14" />
+
+                <include layout="@layout/base_lowline"></include>
+
+                <LinearLayout
+                    android:id="@+id/llayout_three_operate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:layout_marginRight="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <Button
+                        android:id="@+id/button_three_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_marginRight="@dimen/dp8"
+                        android:layout_weight="1"
+                        android:background="@drawable/retry_stroke_bg"
+                        android:gravity="center"
+                        android:text="拒绝"
+                        android:textColor="@color/button_black"
+                        android:textSize="@dimen/sp16" />
+
+                    <Button
+                        android:id="@+id/button_three_yes"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_marginLeft="@dimen/dp8"
+                        android:layout_weight="1"
+                        android:background="@drawable/black_bg"
+                        android:gravity="center"
+                        android:text="同意"
+                        android:textColor="@color/low_white"
+                        android:textSize="@dimen/sp16" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+</layout>

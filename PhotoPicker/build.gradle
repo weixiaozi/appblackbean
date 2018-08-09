@@ -1,0 +1,32 @@
+apply plugin: 'com.android.library'
+
+android {
+  compileSdkVersion 26
+  buildToolsVersion '26.0.2'
+  resourcePrefix "__picker_"
+
+  dexOptions {
+    javaMaxHeapSize "4g"
+  }
+  defaultConfig {
+    minSdkVersion 14
+    targetSdkVersion 26
+  }
+  lintOptions {
+    abortOnError false
+  }
+}
+dependencies {
+  compile "com.android.support:support-v4:$supportLibVersion"
+  compile "com.android.support:appcompat-v7:$supportLibVersion"
+  compile "com.android.support:design:$supportLibVersion"
+  compile "com.android.support:recyclerview-v7:$supportLibVersion"
+  compile "com.android.support:support-annotations:$supportLibVersion"
+  compile 'com.github.bumptech.glide:glide:4.7.1'
+  //  compile 'com.github.chrisbanes:PhotoView:2.0.0'
+  //  implementation 'com.github.chrisbanes:PhotoView:latest.release.here'
+//  implementation project(':photoview')
+  implementation project(':scaleimglibrary')
+//  implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.10.0'
+}
+

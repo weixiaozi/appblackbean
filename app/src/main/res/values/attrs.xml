@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyCircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="imageType" />
+        <attr name="cornerRadius" />
+        <attr name="notRoundedCorners" />
+    </declare-styleable>
+    <attr name="cornerRadius" format="dimension" />
+    <attr name="borderColor" format="color" />
+    <attr name="imageType">
+        <enum name="circle_image" value="0" />
+        <enum name="corner_image" value="1" />
+    </attr>
+    <attr name="notRoundedCorners">
+        <enum name="left_top" value="1" />
+        <enum name="left_bottom" value="2" />
+        <enum name="right_top" value="3" />
+        <enum name="right_bottom" value="4" />
+    </attr>
+</resources>

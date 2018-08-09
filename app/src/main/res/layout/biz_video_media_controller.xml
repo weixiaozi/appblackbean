@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:id="@+id/llayout_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/ic_vod_player_cover"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp15"
+            android:paddingRight="@dimen/dp15">
+
+            <ImageView
+                android:id="@+id/pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_vod_play_normal" />
+
+            <TextView
+                android:id="@+id/time_pos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="00:00"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp10" />
+
+
+            <SeekBar
+                android:id="@+id/media_controller_progress"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_weight="1.0"
+                android:progressDrawable="@drawable/biz_video_progressbar"
+                android:thumb="@drawable/ic_vod_thumb" />
+
+
+            <TextView
+                android:id="@+id/time_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="00:00"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp10" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/expand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/resolutionTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="11.0sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llayout_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp20"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingRight="@dimen/dp15"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txt_editvideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="编辑"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/txt_editvideo_des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="只能分享15秒以内的视频，需进行编辑"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp13" />
+
+            <TextView
+                android:id="@+id/btn_finish"
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp37"
+                android:background="@drawable/blue_bg"
+                android:gravity="center"
+                android:text="编辑"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llayout_record_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llayout_control"
+        android:layout_marginBottom="@dimen/dp36"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_record_restart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_record_restart" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_record_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_record_sure" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_play_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/icon_play_big"
+        android:visibility="gone" />
+</RelativeLayout>

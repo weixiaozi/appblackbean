@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="bbs.com.xinfeng.bbswork.ui.activity.TopicDeatilSelfActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/basebar"
+            layout="@layout/base_bar"></include>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/llayout_root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/llayout_topic_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp114"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dp20"
+                    android:paddingTop="@dimen/dp23">
+
+                    <bbs.com.xinfeng.bbswork.widget.CircleImageView
+                        android:id="@+id/iv_topic_page"
+                        android:layout_width="@dimen/dp71"
+                        android:layout_height="@dimen/dp71"
+                        android:layout_marginLeft="@dimen/dp15"
+                        android:layout_marginRight="@dimen/dp18"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_topic_default"
+                        app:cornerRadius="@dimen/dp10"
+                        app:imageType="corner_image" />
+
+                    <TextView
+                        android:id="@+id/txt_topic_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp15" />
+
+                    <ImageView
+                        android:id="@+id/iv_info_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp15"
+                        android:src="@drawable/icon_next"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp8"
+                    android:background="@color/line_block_color"></View>
+
+                <LinearLayout
+                    android:id="@+id/llayout_topoic_introduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dp20"
+                    android:paddingLeft="@dimen/dp15"
+                    android:paddingRight="@dimen/dp15"
+                    android:paddingTop="@dimen/dp15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="@dimen/dp23"
+                        android:text="简介"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp15" />
+
+                    <TextView
+                        android:id="@+id/txt_t_detail_introduce"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="@dimen/dp20"
+                        android:layout_marginTop="@dimen/dp1"
+                        android:layout_weight="1"
+                        android:textColor="@color/notify_reason"
+                        android:textSize="@dimen/sp13" />
+
+                    <ImageView
+                        android:id="@+id/iv_introduce_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_next"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_member_length"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/line_block_color"
+                    android:paddingBottom="@dimen/dp10"
+                    android:paddingLeft="@dimen/dp15"
+                    android:paddingTop="@dimen/dp19"
+                    android:text="23 成员"
+                    android:textColor="@color/input_txt_lenght"
+                    android:textSize="@dimen/sp12" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycle_member_head"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/dp15"
+                        android:paddingRight="@dimen/dp15">
+
+                    </android.support.v7.widget.RecyclerView>
+                </RelativeLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/flayout_allmembers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:drawablePadding="@dimen/dp11"
+                        android:drawableRight="@drawable/icon_next_small"
+                        android:gravity="center"
+                        android:padding="@dimen/dp25"
+                        android:text="查看更多成员" />
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llayout_topic_themes_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/line_block_color"
+                        android:paddingBottom="@dimen/dp10"
+                        android:paddingLeft="@dimen/dp15"
+                        android:paddingTop="@dimen/dp19"
+                        android:text="热门观点"
+                        android:textColor="@color/input_txt_lenght"
+                        android:textSize="@dimen/sp12" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:descendantFocusability="blocksDescendants">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycle_topic_themes"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:overScrollMode="never">
+
+                        </android.support.v7.widget.RecyclerView>
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/txt_topic_more_thread"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:drawablePadding="@dimen/dp11"
+                        android:drawableRight="@drawable/icon_next_small"
+                        android:gravity="center"
+                        android:padding="@dimen/dp25"
+                        android:text="查看更多观点" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp16"
+                        android:background="@color/line_block_color"></View>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,6 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/animation_vector">
+    <target
+        android:name="star"
+        android:animation="@anim/image_default_anim"></target>
+</animated-vector>

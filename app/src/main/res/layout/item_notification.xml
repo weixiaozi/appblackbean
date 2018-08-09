@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llayout_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp15">
+
+        <bbs.com.xinfeng.bbswork.widget.CircleImageView
+            android:id="@+id/iv_head"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginRight="@dimen/dp9"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_head_default" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/dp32"
+            android:layout_marginTop="@dimen/dp2"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_apply_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp8"
+                    android:layout_marginRight="@dimen/dp9"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxWidth="@dimen/dp100"
+                    android:text="李强"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp15" />
+
+
+                <TextView
+                    android:id="@+id/txt_notice_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1min"
+                    android:textColor="@color/input_txt_lenght"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_notice_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp8"
+                android:layout_weight="1"
+                android:text="申请加入惺惺惜惺惺"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/txt_apply_reason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="中本聪"
+                android:textColor="@color/input_txt_lenght"
+                android:textSize="@dimen/sp13" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_notify_operate"
+            android:layout_width="@dimen/dp61"
+            android:layout_height="@dimen/dp34"
+            android:layout_marginTop="@dimen/dp6"
+            android:background="@drawable/black_bg"
+            android:gravity="center"
+            android:textColor="@color/low_white"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:id="@+id/txt_notify_status"
+            android:layout_width="@dimen/dp61"
+            android:layout_height="@dimen/dp34"
+            android:layout_marginTop="@dimen/dp6"
+            android:gravity="center"
+            android:textColor="@color/input_txt_lenght"
+            android:textSize="@dimen/sp15" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp0.5"
+        android:layout_marginLeft="@dimen/dp15"
+        android:background="@color/line_low_color"></View>
+</LinearLayout>

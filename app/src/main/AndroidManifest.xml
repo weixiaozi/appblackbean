@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="bbs.com.xinfeng.bbswork">
+
+    <!-- Required -->
+    <permission
+        android:name="bbs.com.xinfeng.bbswork.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <uses-feature android:name="android.hardware.Camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".base.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name=".function.MyFileProvide"
+            android:authorities="bbs.com.xinfeng.bbs.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="${JPUSH_CHANNEL}" />
+
+        <service android:name=".ui.service.UpdateApkService" />
+
+        <activity
+            android:name=".ui.activity.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoAnim">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="blackbean"
+                    android:scheme="blackbean" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ChattingActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activity.TestTabLayoutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.TestCoordinatorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.Test2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.PicTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ClipActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".ui.service.DownLoadPicIntentService" />
+        <service android:name=".ui.service.SocketService" />
+        <service android:name=".ui.service.ProtectService" />
+
+        <activity
+            android:name=".ui.activity.WebviewActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name=".ui.boardreceiver.JpushMyReceier"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="bbs.com.xinfeng.bbswork" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="me.iwf.photopicker.PhotoPickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="me.iwf.photopicker.PhotoPagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".ui.activity.ModifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CreatTopicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.JoinedTopicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SearchTopicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.TopicDeatilOtherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.TopicDeatilSelfActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.TopicOperateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MembersListActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".wxapi.WXEntryActivity" />
+        <activity
+            android:name=".ui.activity.NotifyDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.NotifyDetailShowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MembersDisplayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SystemNotifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.FeedbackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ThemeDetailActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activity.MyThemeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyFansActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyReplyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ReplyMeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ClickMeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AtMemberListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.UserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MineInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyBlacksActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".utils.shortvideo.choose.TCVideoChooseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".utils.shortvideo.videorecord.TCVideoRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".utils.shortvideo.videorecord.TCVideoCutterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".utils.shortvideo.videoplay.NewVodPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.activity.PrivateChatActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activity.ContactsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SearchContactActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.donkingliang.imageselector.ImageSelectorActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.donkingliang.imageselector.PreviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.donkingliang.imageselector.ClipImageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    </application>
+
+</manifest>

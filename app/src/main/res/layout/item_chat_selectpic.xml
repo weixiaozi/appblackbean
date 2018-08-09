@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/dp10"
+        android:paddingTop="@dimen/dp12">
+
+        <FrameLayout
+            android:id="@+id/fllayout_root"
+            android:layout_width="@dimen/dp80"
+            android:layout_height="@dimen/dp80">
+
+            <bbs.com.xinfeng.bbswork.widget.CircleImageView
+                android:id="@+id/iv_chat_pic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|bottom"
+                android:layout_marginRight="@dimen/dp9"
+                android:layout_marginTop="@dimen/dp9"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_chat_addpic"
+                app:cornerRadius="@dimen/dp4"
+                app:imageType="corner_image" />
+
+            <ImageView
+                android:id="@+id/iv_chat_del"
+                android:layout_width="@dimen/dp18"
+                android:layout_height="@dimen/dp18"
+                android:layout_gravity="right|top"
+                android:src="@drawable/icon_chat_delpic" />
+        </FrameLayout>
+    </LinearLayout>
+
+</layout>
